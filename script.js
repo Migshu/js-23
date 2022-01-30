@@ -17,8 +17,7 @@ console.log(screens.length);
 console.log("Стоимость верстки экрана " + screenPrice + " рублей");
 console.log("Стоимость разработки сайта " + fullPrice + " рублей");
 
-console.log(screens.toLowerCase());
-console.log(screens.split( ));
+console.log(screens.toLowerCase().split(", "));
 
 const rollbackSum = fullPrice * rollback / 100;
 console.log(rollbackSum);
