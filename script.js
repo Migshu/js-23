@@ -1,9 +1,24 @@
-let title,
-    screens,
-    screenPrice,
-    rollback,
-    fullPrice,
-    adaptive;
+let title = "Верстка лендинга на заказ",
+    screens = "Простые, Сложные, Интерактивные",
+    screenPrice = 1000,
+    rollback = 30,
+    fullPrice = 10000,
+    adaptive = true;
 
-alert("Да здравствует JS!) Ну, с богом! Поехали..");
-console.log("Проверка связи с консолью. Все ок!");
+
+console.log(typeof title);
+console.log(typeof screens);
+console.log(typeof screenPrice);
+console.log(typeof rollback);
+console.log(typeof fullPrice);
+console.log(typeof adaptive);
+
+console.log(screens.length);
+console.log("Стоимость верстки экрана " + screenPrice + " рублей");
+console.log("Стоимость разработки сайта " + fullPrice + " рублей");
+
+console.log(screens.toLowerCase());
+console.log(screens.split( ));
+
+rollback = fullPrice * rollback / 100;
+console.log(rollback);
