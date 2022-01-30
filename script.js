@@ -1,4 +1,4 @@
-let title = "Верстка лендинга на заказ",
+const title = "Верстка лендинга на заказ",
     screens = "Простые, Сложные, Интерактивные",
     screenPrice = 1000,
     rollback = 30,
@@ -20,5 +20,5 @@ console.log("Стоимость разработки сайта " + fullPrice + 
 console.log(screens.toLowerCase());
 console.log(screens.split( ));
 
-rollback = fullPrice * rollback / 100;
-console.log(rollback);
+const rollbackSum = fullPrice * rollback / 100;
+console.log(rollbackSum);
