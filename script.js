@@ -1,10 +1,32 @@
-const title = "Верстка лендинга на заказ",
-    screens = "Простые, Сложные, Интерактивные",
-    screenPrice = 1000,
-    rollback = 30,
-    fullPrice = 10000,
-    adaptive = true;
+'use strict';
+let title = prompt("Как называется ваш проект?", ""),
+    screens = prompt("Какие типы экранов нужно разработать?", "Простые, Сложные, Интерактивные"),
+    screenPrice = +prompt("Сколько будет стоить данная работа?", "12000"),
+    rollback = 10,
+    adaptive = confirm("Нужен ли адаптив на сайте?"),
+    service1 = prompt("Какой дополнительный тип услуги нужен?", ""),
+    servicePrice1 = +prompt("Сколько это будет стоить?", ""),
+    service2 = prompt("Какой еще дополнительный тип услуги нужен?", ""),
+    servicePrice2 = +prompt("Сколько это будет стоить?", ""),
+    fullPrice = screenPrice + servicePrice1 + servicePrice2,
+    rollbackSum = fullPrice * rollback / 100,
+    servicePercentPrice = fullPrice - rollbackSum;
 
+console.log(Math.ceil(servicePercentPrice));
+
+switch (true) {
+    case 0 <= fullPrice && fullPrice < 15000:
+        console.log("Скидка не предусмотрена");
+        break;
+    case 15000 <= fullPrice && fullPrice < 30000:
+        console.log("Даем скидку в 5%");
+        break;
+    case fullPrice >= 30000:
+        console.log("Даем скидку в 10%");
+        break;
+    default:
+        console.log("Что-то пошло не так");
+}
 
 console.log(typeof title);
 console.log(typeof screens);
@@ -19,5 +41,4 @@ console.log("Стоимость разработки сайта " + fullPrice + 
 
 console.log(screens.toLowerCase().split(", "));
 
-const rollbackSum = fullPrice * rollback / 100;
 console.log(rollbackSum);
