@@ -1,5 +1,6 @@
 'use strict';
-let title = prompt("Как называется ваш проект?", ""),
+// 1 урок 
+const title = prompt("Как называется ваш проект?", ""),
     screens = prompt("Какие типы экранов нужно разработать?", "Простые, Сложные, Интерактивные"),
     screenPrice = +prompt("Сколько будет стоить данная работа?", "12000"),
     rollback = 10,
@@ -12,7 +13,24 @@ let title = prompt("Как называется ваш проект?", ""),
     rollbackSum = fullPrice * rollback / 100,
     servicePercentPrice = fullPrice - rollbackSum;
 
-console.log(Math.ceil(servicePercentPrice));
+// 2 урок 
+console.log("Длина строки из переменной screens: " + screens.length);
+console.log(screens.toLowerCase().split(", ")); 
+
+console.log("Тип переменной title: " + typeof title);
+console.log("Тип переменной screens: " + typeof screens);
+console.log("Тип переменной screenPrice: " + typeof screenPrice);
+console.log("Тип переменной rollback: " + typeof rollback);
+console.log("Тип переменной fullPrice: " + typeof fullPrice);
+console.log("Тип переменной adaptive: " + typeof adaptive);
+
+console.log("Стоимость верстки экрана: " + screenPrice + " рублей");
+console.log("Стоимость разработки сайта: " + fullPrice + " рублей");
+console.log("Сумма отката в рублях: " + rollbackSum);
+
+
+// 3 урок 
+console.log("Стоимость разработки сайта чистыми с округлением в >: " + Math.ceil(servicePercentPrice));
 
 switch (true) {
     case 0 <= fullPrice && fullPrice < 15000:
@@ -28,17 +46,3 @@ switch (true) {
         console.log("Что-то пошло не так");
 }
 
-console.log(typeof title);
-console.log(typeof screens);
-console.log(typeof screenPrice);
-console.log(typeof rollback);
-console.log(typeof fullPrice);
-console.log(typeof adaptive);
-
-console.log(screens.length);
-console.log("Стоимость верстки экрана " + screenPrice + " рублей");
-console.log("Стоимость разработки сайта " + fullPrice + " рублей");
-
-console.log(screens.toLowerCase().split(", "));
-
-console.log(rollbackSum);
